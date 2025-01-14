@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import streamlit as st
 import plotly.express as px
@@ -160,7 +161,7 @@ st.markdown("""
 
 # Load Data
 @st.cache_data
-import os
+
 import pandas as pd
 
 # Function to load data
