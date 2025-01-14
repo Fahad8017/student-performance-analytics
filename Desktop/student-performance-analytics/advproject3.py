@@ -162,7 +162,7 @@ st.markdown("""
 # Load Data
 @st.cache_data
 
-import pandas as pd
+
 
 # Function to load data
 def load_data():
