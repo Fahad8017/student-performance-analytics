@@ -161,7 +161,8 @@ st.markdown("""
 # Load Data
 @st.cache_data
 def load_data():
-    data = pd.read_csv(r"C:\Users\mr laptop\Desktop\students.csv")
+   data = pd.read_csv('students.csv')
+
     return data
 
 data = load_data()
