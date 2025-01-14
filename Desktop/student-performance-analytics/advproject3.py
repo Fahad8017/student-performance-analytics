@@ -160,12 +160,19 @@ st.markdown("""
 
 # Load Data
 @st.cache_data
-def load_data():
-    data = pd.read_csv('data/students.csv')  # Assuming the file is in a folder named 'data'
+import os
+import pandas as pd
 
+# Function to load data
+def load_data():
+    current_dir = os.path.dirname(__file__)  # Get the current directory
+    data_file_path = os.path.join(current_dir, 'data', 'students.csv')  # Build the path
+    data = pd.read_csv(data_file_path)  # Read the CSV file
     return data
 
+# Load data
 data = load_data()
+
 
 # Remove the date/time header
 # Add current user's login with custom styling
